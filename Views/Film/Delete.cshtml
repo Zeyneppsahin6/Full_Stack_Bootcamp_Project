@@ -1,0 +1,10 @@
+@model proje.Models.Film
+
+<div class="container my-4">
+    <h2>Filmi Sil</h2>
+    <p>@Model.Ad adlı filmi silmek istediğinize emin misiniz?</p>
+    <form asp-action="Delete">
+        <button type="submit" class="btn btn-light btn-sm">Sil</button>
+        <a asp-action="Index" class="btn btn-light btn-sm">Geri Dön</a>
+    </form>
+</div>

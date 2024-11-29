@@ -1,0 +1,32 @@
+@model IEnumerable<proje.Models.Film>
+
+<div class="container my-4">
+
+    @if (!Model.Any())
+    {
+        <p class="text-center">Aradığınız kritere uygun film bulunamadı.</p>
+    }
+    else
+    {
+        <h2 class="text-center mb-4">Film Listesi</h2>
+        <div class="row">
+            @foreach (var film in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white position-relative">
+                        <img src="@Url.Content(film.PosterUrl)" class="card-img" alt="@film.Ad"
+                            style="height: 350px; object-fit: cover;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <div class="overlay-content p-3">
+                                <h5 class="card-title mb-2">@film.Ad</h5>
+                                <p class="card-text mb-3">@film.Aciklama</p>
+                                <a href="@Url.Action("Details", "Film", new { id = film.Id })"
+                                    class="btn btn-light btn-sm">Detayları Gör</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

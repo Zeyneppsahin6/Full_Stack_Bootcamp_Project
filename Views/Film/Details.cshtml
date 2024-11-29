@@ -1,0 +1,25 @@
+@model proje.Models.Film
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <img src="@Url.Content(Model.PosterUrl)" alt="@Model.Ad" class="img-fluid">
+        </div>
+
+        <div class="col-md-6 film-info">
+            <h2 class="film-title">@Model.Ad</h2>
+            <p class="film-description">@Model.Aciklama</p>
+            <h5 class="text-muted">Kategori: @Model.Kategori</h5>
+
+            <div class="button-group">
+                <a href="@Url.Action("Index", "Film")" class="btn btn-custom">Anasayfaya Dön</a>
+                <a href="@Url.Action("Category", "Film", new { kategori = Model.Kategori })"
+                    class="btn btn-custom">Kategoriye Dön</a>
+                <a href="@Url.Action("Edit", "Film", new { id = Model.Id })" class="btn btn-custom">Film
+                    Güncelle</a>
+                <a href="@Url.Action("Delete", "Film", new { id = Model.Id })" class="btn btn-custom">Film
+                    Sil</a>
+            </div>
+        </div>
+    </div>
+</div>

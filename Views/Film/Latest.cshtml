@@ -1,0 +1,29 @@
+@model IEnumerable<proje.Models.Film>
+
+<div class="container my-4">
+    <h2 class="text-center mb-4">Son Eklenen Filmler</h2>
+    <div class="row">
+        @foreach (var film in Model)
+        {
+            <div class="col-12 mb-4">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="@Url.Content(film.PosterUrl)" class="card-img" alt="@film.Ad"
+                                style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@film.Ad</h5>
+                                <p class="card-text">@film.Aciklama</p>
+                                <p class="card-text"><small class="text-muted">@film.Kategori</small></p>
+                                <a href="@Url.Action("Details", "Film", new { id = film.Id })"
+                                    class="btn btn-primary">Detayları Gör</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

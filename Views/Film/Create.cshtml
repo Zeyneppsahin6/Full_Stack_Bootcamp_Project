@@ -1,0 +1,34 @@
+@model proje.Models.Film
+
+<div class="container my-4">
+    <h2 class="text-center mb-4">Yeni Film Ekle</h2>
+    <form asp-action="Create">
+        <div class="form-group">
+            <label asp-for="Ad" class="control-label"></label>
+            <input asp-for="Ad" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Aciklama" class="control-label"></label>
+            <textarea asp-for="Aciklama" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="PosterUrl" class="control-label"></label>
+            <input asp-for="PosterUrl" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Kategori" class="control-label"></label>
+            <select asp-for="Kategori" class="form-control">
+                <option value="" selected disabled>Kategori Seçiniz</option>
+                <option value="Animasyon">Animasyon</option>
+                <option value="Bilim Kurgu">Bilim Kurgu</option>
+                <option value="Dram">Dram</option>
+                <option value="Komedi">Komedi</option>
+                <option value="Macera">Macera</option>
+            </select>
+        </div>
+        <div class="form-group mt-3 text-center">
+            <button type="submit" class="btn btn-light btn-sm">Kaydet</button>
+            <a asp-action="Index" class="btn btn-light btn-sm">Geri Dön</a>
+        </div>
+    </form>
+</div>
