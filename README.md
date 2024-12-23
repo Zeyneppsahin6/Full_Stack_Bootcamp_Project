@@ -18,8 +18,8 @@ Bu proje, ASP.NET Core MVC kullanarak geliştirilen bir film yönetim uygulamas�
 ## 🚀 Kurulum Adımları
 
 1. **Proje Dosyalarını İndirin:**
-   git clone https://github.com/Zeyneppsahin6/Full_Stack_Mastery_Bootcamp_Project.git
-   cd Full_Stack_Mastery_Bootcamp_Project
+   git clone https://github.com/Zeyneppsahin6/Full_Stack_Bootcamp_Project.git
+   cd Full_Stack_Bootcamp_Project
 
 2. **Bağımlılıkları Yükleyin:**
    dotnet restore
